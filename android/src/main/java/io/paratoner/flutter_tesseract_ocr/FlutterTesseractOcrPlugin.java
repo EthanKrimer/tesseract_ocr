@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 import androidx.annotation.NonNull;
 
 import java.io.File;
-import java.util.Map.*;
+import java.util.Map;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.BinaryMessenger;
@@ -102,7 +102,7 @@ public class FlutterTesseractOcrPlugin implements FlutterPlugin, MethodCallHandl
       } else {
         recognizedText = baseApi.getUTF8Text();
       }
-      baseApi.end();
+      baseApi.recycle();
       return recognizedText;
     }
 
